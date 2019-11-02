@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CountryServices } from './service/clans-brazil.service';
+import { modelCountry } from './model/country.model';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'coc';
+  public brazil: Array<modelCountry>
+  constructor (private country: CountryServices) { 
+  }
+
+  public ngOnInit() {
+    this.showCountry();
+  }
+
+  public showCountry(): void {
+    this.country.getCountry().subscribe( country => {
+      this.brazil = country
+    })
+  } 
+  
 }
