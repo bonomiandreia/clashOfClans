@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Staatliches&display=swap');
+
+@font-face {
+    font-family: "Supercell-Magic";
+    src: url('youBlockhead.ttf')format("truetype");
+}
+
+body {
+    background-color:#d6e5ff !important;
+}
+
+h1, h2, h3, h5 {
+    font-family: "Supercell-Magic" !important;
+}
+
+h4 {
+    font-family: 'Staatliches';
+}
+

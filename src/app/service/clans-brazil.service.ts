@@ -7,6 +7,7 @@ import { map } from 'rxjs/operators';
 @Injectable()
 export class CountryServices {
     public url = 'https://api.clashofclans.com/v1/locations/32000038/rankings/clans?limit=10';
+    public urlUser = 'https://api.clashofclans.com/v1/locations/32000038/rankings/players?limit=10';
     public arrayBrazil;
     public headers = new HttpHeaders()
              .set('Accept', 'application/json')
@@ -16,6 +17,9 @@ export class CountryServices {
 
     getCountry(): Observable<modelCountry[]> {
         return this.http.get<modelCountry[]>(this.url, { headers: this.headers })
+    }
+    getUser(): Observable<modelCountry[]> {
+        return this.http.get<modelCountry[]>(this.urlUser, { headers: this.headers })
     }
 
 

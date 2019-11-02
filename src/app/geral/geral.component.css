@@ -1,0 +1,23 @@
+.img {
+    width: 50%;
+    box-shadow: 0.6em 0.3em 0.5em #738bb5;
+    background-color: #005eff;
+    border-radius: 83px;
+    margin-top: 10px;
+}
+
+.padding10 {
+    padding: 30px;
+}
+
+.padding20 {
+    padding: 20px;
+}
+
+.img-width {
+    width:70%;
+}
+
+.news {
+    background-color: white;
+}

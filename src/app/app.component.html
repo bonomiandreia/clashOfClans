@@ -1,11 +1,19 @@
-<h1>hello</h1>
-
-<table>
-  <tr *ngFor="let clans of brazil.items">
-    <td>{{ clans.name }}</td>
-    <td>{{ clans.location.name }}</td>
-    <td>{{ clans.location.countryCode }}</td>
-  </tr>
-</table>
-
-<router-outlet></router-outlet>
+<div class="header">
+  <div class="container">
+    <div class="text">
+      <h1>
+      CoC Brazil
+      </h1>
+      <h4>Brazillian blog about Clash Of Clans!</h4>
+      <div class="row">
+        <div class="container">
+          <div class="menu"><a routerLink="/geral">News</a></div>
+          <div class="menu"><a routerLink="/ranking">Ranking Brazil</a></div>
+          <div class="menu"><a routerLink="/aboutme">About</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<router-outlet>
+</router-outlet>
