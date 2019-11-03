@@ -13,13 +13,15 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import { WorldwideComponent } from './worldwide/worldwide.component';
 import { CountryServices } from './service/clans-world.service';
 import { CommonModule } from '@angular/common';
+import { TwitterComponent } from './twitter/twitter.component';
 @NgModule({
   declarations: [
     AppComponent,
     TableComponent,
     GeralComponent,
     AboutMeComponent,
-    WorldwideComponent
+    WorldwideComponent,
+    TwitterComponent
   ],
   imports: [
     BrowserModule,
