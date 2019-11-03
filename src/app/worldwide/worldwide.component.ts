@@ -38,18 +38,14 @@ export class WorldwideComponent implements OnInit {
   }
 
   public selectCountry(event): void {
+    this.firstTime = true;
     this.worldFilter.map((c) => {
       if (c.name == event) {
-        this.firstTime = true;
         let id = c.id;
         let url = 'https://api.clashofclans.com/v1/locations/' + id + '/rankings/clans?limit=10';
         this.country.getSelectCountry(url).subscribe( countrySelected => {
           this.worldCountrySelect = countrySelected;
-          if (this.worldCountrySelect.items.length == 0) {
-            this.showList = false;
-          } else {
-            this.showList = true;
-          }
+          this.worldCountrySelect.items.length == 0 ? this.showList = false : this.showList = true;
         })
       }
 

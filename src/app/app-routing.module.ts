@@ -9,10 +9,10 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   { path: '', component:GeralComponent },
-  { path: 'ranking', component: TableComponent },
-  { path: 'geral', component:GeralComponent },
+  { path: 'rankingBrazil', component: TableComponent },
+  { path: 'news', component:GeralComponent },
   { path: 'aboutme', component:AboutMeComponent },
-  { path: 'worldwide', component:WorldwideComponent }
+  { path: 'rankingWorldwide', component:WorldwideComponent }
 ];
 
 @NgModule({
