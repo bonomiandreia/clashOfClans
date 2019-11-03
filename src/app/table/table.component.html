@@ -3,27 +3,29 @@
     <img src="assets/icon-br.png"><h2 class="textBrazil">Ranking BRAZIL</h2><img src="assets/icon-br.png">
     </div>
     <div class="container">
-        <div class="row"><div class="col-12"><h5>Clans</h5></div></div>
-        <div class="padding-10">
-            <table class="table table-sm">
-                <thead>
-                    <tr>
-                    <th scope="col">Ranking</th>
-                    <th scope="col" class="namesClans">Name's Clans</th>
-                    <th scope="col">LVL</th>
-                    <th scope="col">Points</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let clans of brazil.items">
-                    <td>#{{ clans.rank }}</td>
-                    <td>{{ clans.name }} -  {{ clans.location.name }}</td>
-                    <td>{{ clans.clanLevel }}</td>
-                    <td> {{ clans.clanPoints }}</td>
-                    </tr>
-                    <tr>
-                </tbody>
-            </table>
+        <div>
+            <div class="row"><div class="col-12"><h5>Clans</h5></div></div>
+            <div class="padding-10">
+                <table class="table table-sm">
+                    <thead>
+                        <tr>
+                        <th scope="col">Ranking</th>
+                        <th scope="col" class="namesClans">Name's Clans</th>
+                        <th scope="col">LVL</th>
+                        <th scope="col">Points</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let clans of brazil.items">
+                        <td>#{{ clans.rank }}</td>
+                        <td>{{ clans.name }} -  {{ clans.location.name }}</td>
+                        <td>{{ clans.clanLevel }}</td>
+                        <td> {{ clans.clanPoints }}</td>
+                        </tr>
+                        <tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
         <div class="top20">
             <div class="row"><div class="col-12"><h5>Users</h5></div></div>

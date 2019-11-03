@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row justify-content-center padding15">
+        <h5>Choose the country you desire:</h5>
+    </div>
+    <div class="row justify-content-center">
+        <select class="form-control form-control-sm small" [(ngModel)]="selectedOption" (change)="selectCountry(selectedOption)">
+            <option value='-1' disabled>Select country</option>
+            <option *ngFor="let country of worldFilter">{{country.name}}</option>
+        </select>
+    </div>
+    <div *ngIf="showList && firstTime" class="padding15">
+        <div class="row"><div class="col-12"><h5>Clans</h5></div></div>
+        <div class="padding-10">
+            <table class="table table-sm">
+                <thead>
+                    <tr>
+                    <th scope="col">Ranking</th>
+                    <th scope="col" class="namesClans">Name's Clans</th>
+                    <th scope="col">LVL</th>
+                    <th scope="col">Points</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let clans of worldCountrySelect.items">
+                        <td>#{{ clans.rank }}</td>
+                        <td>{{ clans.name }} -  {{ clans.location.name }}</td>
+                        <td>{{ clans.clanLevel }}</td>
+                        <td> {{ clans.clanPoints }}</td>
+                    </tr>
+                    <tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div *ngIf="!showList && firstTime"><div class="row justify-content-center padding15">Without ranking :( Select other country</div></div>
+</div>

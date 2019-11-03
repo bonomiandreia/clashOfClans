@@ -1,5 +1,6 @@
+import { CountryServices } from './../service/clans-world.service';
+import { BrazilServices } from './../service/clans-brazil.service';
 import { modelCountry } from './../model/country.model';
-import { CountryServices } from './../service/clans-brazil.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,9 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TableComponent implements OnInit {
 
+  public urlBr = 'https://api.clashofclans.com/v1/locations/32000038/rankings/clans?limit=10';
+  public urlUser = 'https://api.clashofclans.com/v1/locations/32000038/rankings/players?limit=10';
   public brazil: Array<modelCountry>
   public usersBrazil;
-  constructor (private country: CountryServices) { 
+  constructor (private country: BrazilServices) { 
   }
 
   public ngOnInit() {
@@ -22,15 +25,16 @@ export class TableComponent implements OnInit {
   }
 
   public showCountry(): void {
-    this.country.getCountry().subscribe( country => {
+    this.country.getBrazil(this.urlBr).subscribe( country => {
       this.brazil = country
     })
+    
+    
   }
 
   public showUser(): void {
-    this.country.getUser().subscribe( users => {
+    this.country.getBrazil(this.urlUser).subscribe( users => {
       this.usersBrazil = users;
-      console.log(this.usersBrazil)
     })
   }
 
