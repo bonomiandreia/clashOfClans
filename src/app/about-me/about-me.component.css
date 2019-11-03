@@ -1,0 +1,54 @@
+.img {
+    width: 70%;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+}
+
+.about {
+    background-color: white;
+    padding: 30px;
+    box-shadow: 0.6em 0.3em 1.5em #7485a2; 
+    border-radius: 25px;      
+}
+
+.marginTop {
+    margin-top: 25px;
+}
+
+.displayblock {
+    display: block !important;
+}
+
+.margin10 {
+    margin-top: 10px;
+}
+
+.imgBehance {
+    width: 29px;
+    margin-right: 1%;
+    margin-left: 2.5%;
+}
+
+@media only screen and (max-width: 768px) {
+    .img {
+        width: 70%;
+        margin: auto;
+        position: relative;
+        top: 0;
+        left: 40px;
+        bottom: 0;
+        right: 0;
+        margin-bottom: 25px;
+    
+    }
+
+    .about  {
+        border-radius: 0;
+    }
+    
+}
